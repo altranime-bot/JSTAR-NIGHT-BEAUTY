@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jstar Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: white;
+            min-height: 100vh;
+        }
+
+        header {
+            padding: 20px;
+            text-align: center;
+            background: rgba(0,0,0,0.4);
+        }
+
+        header h1 {
+            font-size: 28px;
+            letter-spacing: 2px;
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 80px 20px;
+            animation: fadeIn 2s ease;
+        }
+
+        .hero h2 {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 500px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .hero button {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            background: #00ffcc;
+            color: black;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .hero button:hover {
+            background: white;
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: rgba(0,0,0,0.4);
+            font-size: 14px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>JSTAR</h1>
+    </header>
+
+    <section class="hero">
+        <h2>Welcome to Jstar Website</h2>
+        <p>
+            Ye ek simple aur clean website hai jo GitHub Pages par free me host hoti hai.
+            Tum ise copy paste karke apni bana sakte ho.
+        </p>
+        <button onclick="alert('Thanks for visiting Jstar Website!')">
+            Click Me
+        </button>
+    </section>
+
+    <footer>
+        © 2026 Designed by Jstar
+    </footer>
+
+</body>
+</html>
