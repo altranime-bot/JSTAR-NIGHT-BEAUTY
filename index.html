@@ -1,113 +1,134 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Jstar Website</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="en"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <title>JSTAR Website</title> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', Arial, sans-serif;
+}
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+body{
+    min-height:100vh;
+    background: linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#1cb5e0);
+    background-size:400% 400%;
+    animation:bgMove 12s ease infinite;
+    color:white;
+}
 
-        body {
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-            color: white;
-            min-height: 100vh;
-        }
+/* ===== HEADER ===== */
+header{
+    text-align:center;
+    padding:25px;
+    background:rgba(0,0,0,0.35);
+    backdrop-filter:blur(10px);
+}
 
-        header {
-            padding: 20px;
-            text-align: center;
-            background: rgba(0,0,0,0.4);
-        }
+header h1{
+    font-size:32px;
+    letter-spacing:4px;
+    background:linear-gradient(90deg,#00ffcc,#00c6ff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
 
-        header h1 {
-            font-size: 28px;
-            letter-spacing: 2px;
-        }
+/* ===== HERO CARD ===== */
+.hero{
+    min-height:75vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+}
 
-        .hero {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 80px 20px;
-            animation: fadeIn 2s ease;
-        }
+.card{
+    background:rgba(255,255,255,0.1);
+    border-radius:20px;
+    padding:50px 30px;
+    max-width:550px;
+    text-align:center;
+    backdrop-filter:blur(15px);
+    box-shadow:0 20px 40px rgba(0,0,0,0.4);
+    animation:fadeUp 1.8s ease;
+}
 
-        .hero h2 {
-            font-size: 40px;
-            margin-bottom: 15px;
-        }
+.card h2{
+    font-size:42px;
+    margin-bottom:15px;
+    text-shadow:0 0 20px rgba(0,255,204,0.6);
+}
 
-        .hero p {
-            font-size: 18px;
-            max-width: 500px;
-            margin-bottom: 30px;
-            opacity: 0.9;
-        }
+.card p{
+    font-size:18px;
+    opacity:0.9;
+    margin-bottom:30px;
+    line-height:1.6;
+}
 
-        .hero button {
-            padding: 12px 30px;
-            border: none;
-            border-radius: 25px;
-            background: #00ffcc;
-            color: black;
-            font-size: 16px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
+/* ===== BUTTON ===== */
+.card button{
+    padding:14px 40px;
+    border:none;
+    border-radius:30px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    color:#000;
+    background:linear-gradient(90deg,#00ffcc,#00c6ff);
+    box-shadow:0 0 20px rgba(0,255,204,0.6);
+    transition:0.3s ease;
+}
 
-        .hero button:hover {
-            background: white;
-            transform: scale(1.05);
-        }
+.card button:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 35px rgba(0,255,204,0.9);
+}
 
-        footer {
-            text-align: center;
-            padding: 15px;
-            background: rgba(0,0,0,0.4);
-            font-size: 14px;
-        }
+/* ===== FOOTER ===== */
+footer{
+    text-align:center;
+    padding:15px;
+    background:rgba(0,0,0,0.35);
+    font-size:14px;
+    letter-spacing:1px;
+}
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
-</head>
+/* ===== ANIMATIONS ===== */
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
 
-<body>
-
-    <header>
-        <h1>JSTAR</h1>
-    </header>
-
-    <section class="hero">
-        <h2>Welcome to Jstar Website</h2>
-        <p>
-            Ye ek simple aur clean website hai jo GitHub Pages par free me host hoti hai.
-            Tum ise copy paste karke apni bana sakte ho.
-        </p>
-        <button onclick="alert('Thanks for visiting Jstar Website!')">
-            Click Me
-        </button>
-    </section>
-
-    <footer>
-        © 2026 Designed by Jstar
-    </footer>
-
-</body>
+@keyframes bgMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+</style> 
+ </head> 
+ <body> 
+  <header> 
+   <h1>JSTAR</h1> 
+  </header> 
+  <section class="hero"> 
+   <div class="card"> 
+    <h2>Welcome to Jstar Website</h2> 
+    <p> This is my first webpage,you interested for more knowing me so click below button.</p><button onclick="window.open('https://www.instagram.com/its.jstar?igsh=MWprYm14OWt6MGZrYQ==','_blank')">
+ explore now &lt; button&gt; </button> 
+   </div> 
+  </section> 
+  <footer>
+    © 2026 | Designed with ❤️ by JSTAR 
+  </footer> 
+ </body>
 </html>
